@@ -1,0 +1,126 @@
+/* resets */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  font-size: 2.1em;
+}
+
+h2 {
+  font-weight: 400;
+  color: hsl(234, 12%, 34%);
+}
+
+span {
+  color: hsl(229, 6%, 66%);
+  /* display: block; */
+  font-size: 1.95em;
+  font-weight: 600;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+  margin-top: 20px;
+}
+
+img {
+  display: block;
+  width: 32px;
+  margin: 2em;
+  margin-left: 80%;
+}
+
+/* stylings */
+
+body {
+  font-family: "Poppin", sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 960px;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  place-items: center;
+}
+
+.container {
+  background-color: #fff;
+  width: 100%;
+  height: 70%;
+  position: relative;
+  text-align: left;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.185);
+}
+
+.container p {
+  margin-top: 0;
+}
+.supervisor {
+  grid-column: 1/4;
+  grid-row: 3/9;
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  grid-column: 5/8;
+  grid-row: 1/7;
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.calculator {
+  grid-column: 9/12;
+  grid-row: 3/9;
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.karma {
+  grid-column: 5/8;
+  grid-row: 7/13;
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    line-height: 1.2;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+  }
+
+  .container {
+    padding: 20px 20px 0 20px;
+    margin: 20px 0;
+  }
+}
